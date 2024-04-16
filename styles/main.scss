@@ -1,0 +1,327 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./scss/variables.scss";
+@import "./scss/style.scss";
+
+:root {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath fill='%23fff' stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+body {
+  color: $white;
+}
+
+// Section
+.section {
+  &-hero {
+    &-flex {
+      height: 50vh;
+      align-items: center;
+    }
+
+    &-name {
+      border-bottom: 3px solid $primary;
+      width: fit-content;
+    }
+
+    &-introduction {
+      position: relative;
+      display: inline-block;
+      padding-left: 1.5rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -2px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background-image: url("/images/icons/person.svg");
+        background-size: cover;
+      }
+    }
+
+    &-learn-more {
+      &-text {
+        position: relative;
+        text-decoration: none;
+        text-underline-offset: 1px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 0;
+          height: 2px;
+          background-color: #ff8300;
+          transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+
+        p {
+          display: inline;
+        }
+
+        svg {
+          display: inline;
+          vertical-align: middle;
+        }
+      }
+
+      svg {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover svg {
+        transform: scale(1.3);
+      }
+    }
+  }
+}
+
+// Individual
+.bg-body {
+  &-primary {
+    background-color: $heavy-metal;
+  }
+
+  &-secondary {
+    background-color: $charcoal !important;
+  }
+}
+
+.clr-body {
+  &-white {
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary !important;
+    }
+  }
+
+  &-primary {
+    color: $primary;
+  }
+
+  &:has(.active) {
+    color: $primary !important;
+  }
+}
+
+.icon {
+  path {
+    fill: $white;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover {
+    path {
+      fill: $primary;
+    }
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url(../../images/icons/navbar.svg);
+}
+
+.mb--2 {
+  margin-bottom: -1rem;
+}
+
+.pl-4 {
+  padding-left: 2rem;
+}
+
+.btn {
+  width: 10rem;
+  margin-right: calc(1.5rem * 0.5);
+  margin-left: calc(1.5rem * 0.5);
+
+  &-outline {
+    &-primary {
+      color: $primary;
+      border-color: $primary;
+      transition: background-color 0.3s ease, border-color 0.3s ease,
+        color 0.3s ease;
+
+      &:hover {
+        background-color: $primary;
+        border-color: $heavy-metal;
+        color: $heavy-metal;
+      }
+    }
+  }
+}
+
+.border-none-lg {
+  @include media-breakpoint-down(lg) {
+    border-left: none !important;
+  }
+}
+
+// Rotate Animation
+.rotate {
+  position: absolute;
+  top: 5rem;
+  right: -21rem;
+  height: 40rem;
+  animation: rotate-right 200s linear infinite;
+
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    top: 8rem;
+    right: -15rem;
+    height: 30rem;
+    animation: rotate-right 200s linear infinite;
+  }
+}
+
+@keyframes rotate-right {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+// Skills bar
+.techical-bars {
+  .bar {
+    font-size: 23px;
+    margin: 40px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .info {
+      margin-bottom: 5px;
+      span {
+        font-size: 17px;
+        font-weight: 500;
+        animation: showText 0.5s 1s linear forwards;
+        opacity: 0;
+      }
+    }
+
+    .progress-line {
+      position: relative;
+      border-radius: 10px;
+      width: 100%;
+      height: 5px;
+      background-color: $white;
+      animation: animate 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+      transform: scaleX(0);
+      transform-origin: left;
+
+      span {
+        height: 100%;
+        background-color: $primary;
+        position: absolute;
+        border-radius: 10px;
+        animation: animate 1s 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+        transform: scaleX(0);
+        transform-origin: left;
+
+        &::after {
+          position: absolute;
+          color: white;
+          font-size: 12px;
+          border-radius: 3px;
+          top: -28px;
+          right: -20px;
+          animation: showText 0.5s 1.5s linear forwards;
+          opacity: 0;
+        }
+      }
+
+      &.skill {
+        &-65 {
+          span {
+            width: 65%;
+            &::after {
+              content: "65%";
+            }
+          }
+        }
+        &-70 {
+          span {
+            width: 70%;
+            &::after {
+              content: "70%";
+            }
+          }
+        }
+        &-75 {
+          span {
+            width: 75%;
+            &::after {
+              content: "75%";
+            }
+          }
+        }
+        &-80 {
+          span {
+            width: 80%;
+            &::after {
+              content: "80%";
+            }
+          }
+        }
+        &-85 {
+          span {
+            width: 85%;
+            &::after {
+              content: "85%";
+            }
+          }
+        }
+        &-90 {
+          span {
+            width: 90%;
+            &::after {
+              content: "90%";
+            }
+          }
+        }
+        &-95 {
+          span {
+            width: 95%;
+            &::after {
+              content: "95%";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .animate-on-scroll span,
+  .animate-on-scroll span::after {
+    animation: none;
+  }
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}

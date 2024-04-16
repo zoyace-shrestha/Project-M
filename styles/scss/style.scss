@@ -1,0 +1,91 @@
+@import "./variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath fill='%23fff' stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+body {
+  color: $white;
+}
+
+// Section
+.section {
+  &-hero {
+    &-name {
+      border-bottom: 3px solid $primary;
+    }
+  }
+}
+
+// Individual
+.bg-body {
+  &-primary {
+    background-color: $heavy-metal;
+  }
+
+  &-secondary {
+    background-color: $charcoal;
+  }
+}
+
+.clr-body {
+  &-white {
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary !important;
+    }
+  }
+
+  &:has(.active) {
+    color: $primary !important;
+  }
+}
+
+.icon {
+  path {
+    fill: $white;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover {
+    path {
+      fill: $primary;
+    }
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url(../../images/icons/navbar.svg);
+}
+
+.mb--2 {
+  margin-bottom: -1rem;
+}
+
+.pl-4 {
+  padding-left: 2rem;
+}
+
+.btn {
+  &-outline {
+    &-primary {
+      color: $primary;
+      border-color: $primary;
+
+      &:hover {
+        background-color: $primary;
+        border-color: $white;
+      }
+    }
+  }
+}
+
+.border-none-lg {
+  @include media-breakpoint-down(lg) {
+    border-left: none !important;
+  }
+}
