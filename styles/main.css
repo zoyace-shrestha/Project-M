@@ -24005,8 +24005,13 @@ body {
   color: #fff;
 }
 
+.animate-on-scroll span,
+.animate-on-scroll span::after {
+  animation: none; /* Disable animation initially */
+}
+
 .section-hero-flex {
-  height: 50vh;
+  height: 80vh;
   align-items: center;
 }
 .section-hero-name {
@@ -24060,6 +24065,13 @@ body {
 }
 .section-hero-learn-more:hover svg {
   transform: scale(1.3);
+}
+.section-about-me {
+  background: url(/images/background/nepalBackgroundOutline.svg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-attachment: fixed;
+  background-position: bottom;
 }
 
 .bg-body-primary {
@@ -24151,7 +24163,7 @@ body {
 }
 .techical-bars .bar {
   font-size: 23px;
-  margin: 40px 0;
+  margin: 2rem 0;
 }
 .techical-bars .bar:first-child {
   margin-top: 0;
@@ -24238,10 +24250,6 @@ body {
 }
 .techical-bars .bar .progress-line.skill-95 span::after {
   content: "95%";
-}
-.techical-bars .animate-on-scroll span,
-.techical-bars .animate-on-scroll span::after {
-  animation: none;
 }
 
 @keyframes animate {
