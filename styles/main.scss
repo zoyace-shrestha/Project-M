@@ -92,7 +92,19 @@ body {
     background-repeat: no-repeat;
     background-size: 80%;
     background-attachment: fixed;
-    background-position: bottom;
+    background-position: center;
+
+    img {
+      height: 400px;
+      width: auto;
+    }
+
+    .text::before {
+      content: url(/images/icons/quote.svg);
+      display: block;
+      width: 50px;
+      height: auto;
+    }
   }
 }
 
@@ -331,5 +343,62 @@ body {
 @keyframes showText {
   100% {
     opacity: 1;
+  }
+}
+
+.animation-text {
+  margin-bottom: 2rem;
+  p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+  }
+
+  .word {
+    position: absolute;
+    opacity: 0;
+    font-size: 25px;
+  }
+
+  .letter {
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+  }
+
+  .letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  .letter.behind {
+    transform: rotateX(-90deg);
+  }
+
+  .letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .wisteria {
+    color: #8e44ad;
+  }
+
+  .belize {
+    color: #2980b9;
+  }
+
+  .pomegranate {
+    color: #c0392b;
+  }
+
+  .green {
+    color: #16a085;
+  }
+
+  .midnight {
+    color: #2c3e50;
   }
 }

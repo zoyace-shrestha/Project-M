@@ -24071,7 +24071,17 @@ body {
   background-repeat: no-repeat;
   background-size: 80%;
   background-attachment: fixed;
-  background-position: bottom;
+  background-position: center;
+}
+.section-about-me img {
+  height: 400px;
+  width: auto;
+}
+.section-about-me .text::before {
+  content: url(/images/icons/quote.svg);
+  display: block;
+  width: 50px;
+  height: auto;
 }
 
 .bg-body-primary {
@@ -24261,4 +24271,50 @@ body {
   100% {
     opacity: 1;
   }
+}
+.animation-text {
+  margin-bottom: 2rem;
+}
+.animation-text p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+.animation-text .word {
+  position: absolute;
+  opacity: 0;
+  font-size: 25px;
+}
+.animation-text .letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+.animation-text .letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.animation-text .letter.behind {
+  transform: rotateX(-90deg);
+}
+.animation-text .letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.animation-text .wisteria {
+  color: #8e44ad;
+}
+.animation-text .belize {
+  color: #2980b9;
+}
+.animation-text .pomegranate {
+  color: #c0392b;
+}
+.animation-text .green {
+  color: #16a085;
+}
+.animation-text .midnight {
+  color: #2c3e50;
 }/*# sourceMappingURL=main.css.map */
