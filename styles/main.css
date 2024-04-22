@@ -11991,12 +11991,54 @@ body {
   padding: 5rem 0;
 }
 
+.section-navbar {
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  z-index: 10;
+}
+.section-navbar .navbar-toggler-icon {
+  background-image: url(../../images/icons/navbar.svg);
+}
+.section-navbar .icon path {
+  fill: #fff;
+  transition: fill 0.3s ease;
+}
+.section-navbar .icon:hover path {
+  fill: #ff8300;
+}
+@media (max-width: 991.98px) {
+  .section-navbar .border-none-lg {
+    border-left: none !important;
+    padding-left: 0;
+  }
+}
+.section-progress-bar {
+  position: fixed;
+  width: 100%;
+  height: 2px;
+  z-index: 100;
+  top: 93px;
+}
+.section-progress-bar .filled {
+  width: 0%;
+  height: 100%;
+  background-image: linear-gradient(to right, #ff8300, #ff8300);
+}
 .section-hero {
   background: url(../images/background/nepalBackgroundOutline.svg);
   background-repeat: no-repeat;
   background-size: 80%;
   background-attachment: fixed;
   background-position: center;
+}
+.section-hero-flex {
+  height: 75vh;
+}
+@media (max-width: 991.98px) {
+  .section-hero-flex {
+    height: auto;
+  }
 }
 .section-hero-name {
   width: -moz-fit-content;
@@ -12073,6 +12115,83 @@ body {
 .section-hero-learn-more:hover svg {
   transform: scale(1.3);
 }
+.section-hero .btn {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  max-width: 10rem;
+}
+.section-hero .btn img {
+  transition: all 0.3s;
+  max-width: 32px;
+  height: auto;
+}
+.section-hero .btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: -2;
+}
+.section-hero .btn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ff8300;
+  transition: all 0.5s;
+  z-index: -1;
+}
+.section-hero .btn:hover {
+  color: black;
+}
+.section-hero .btn:hover img {
+  filter: invert(1) sepia(0) saturate(0) hue-rotate(0deg) brightness(0);
+}
+.section-hero .btn:hover:before {
+  width: 100%;
+}
+.section-hero .animation-text {
+  margin-bottom: 2rem;
+}
+.section-hero .animation-text p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+.section-hero .animation-text .word {
+  position: absolute;
+  opacity: 0;
+  font-size: 25px;
+}
+.section-hero .animation-text .letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+.section-hero .animation-text .letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.section-hero .animation-text .letter.behind {
+  transform: rotateX(-90deg);
+}
+.section-hero .animation-text .letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 .section-about-me {
   background: url(/images/background/nepalBackgroundOutline.svg);
   background-repeat: no-repeat;
@@ -12113,11 +12232,12 @@ body {
   position: relative;
   border-radius: 10px;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background-color: #fff;
   animation: animate 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   transform: scaleX(0);
   transform-origin: left;
+  animation-delay: 2s;
 }
 .section-skills .techical-bars .bar .progress-line span {
   height: 100%;
@@ -12127,6 +12247,7 @@ body {
   animation: animate 1s 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   transform: scaleX(0);
   transform-origin: left;
+  animation-delay: 3s;
 }
 .section-skills .techical-bars .bar .progress-line span::after {
   position: absolute;
@@ -12137,6 +12258,7 @@ body {
   right: -20px;
   animation: showText 0.5s 1.5s linear forwards;
   opacity: 0;
+  animation-delay: 2s;
 }
 .section-skills .techical-bars .bar .progress-line.skill-65 span {
   width: 65%;
@@ -12197,12 +12319,205 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
+.section-experience .image-gallery {
+  display: grid;
+  grid-template-areas: "image1 image5 image2 image2  " "image4 image5 image3 image3  ";
+}
+.section-experience .image-gallery .image1 {
+  grid-area: image1;
+}
+.section-experience .image-gallery .image2 {
+  grid-area: image2;
+}
+.section-experience .image-gallery .image3 {
+  grid-area: image3;
+}
+.section-experience .image-gallery .image4 {
+  grid-area: image4;
+}
+.section-experience .image-gallery .image5 {
+  grid-area: image5;
+}
+@media (max-width: 767.98px) {
+  .section-experience .image-gallery {
+    grid-template-areas: "image1" "image2" "image3" "image4" "image5";
+  }
+}
+.section-experience figure.experience-image {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  background: #000000;
+  text-align: left;
+}
+.section-experience figure.experience-image * {
+  box-sizing: border-box;
+}
+.section-experience figure.experience-image img {
+  max-width: 100%;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.35s;
+}
+.section-experience figure.experience-image figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px 3em;
+  width: 100%;
+  height: 100%;
+}
+.section-experience figure.experience-image figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 100%;
+  border-left: 4px solid #ff8300;
+  content: "";
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s;
+  transition-delay: 0.6s;
+}
+.section-experience figure.experience-image h2, .section-experience figure.experience-image .h2,
+.section-experience figure.experience-image p {
+  margin: 0 0 5px;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+}
+.section-experience figure.experience-image h2, .section-experience figure.experience-image .h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  transform: translate3d(30%, 0%, 0);
+  transition-delay: 0.3s;
+}
+.section-experience figure.experience-image h2 span, .section-experience figure.experience-image .h2 span {
+  font-weight: 800;
+}
+.section-experience figure.experience-image p {
+  font-weight: 200;
+  transform: translate3d(0%, 30%, 0);
+  transition-delay: 0s;
+}
+.section-experience figure.experience-image a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+.section-experience figure.experience-image:hover img {
+  opacity: 0.3;
+}
+.section-experience figure.experience-image:hover figcaption h2, .section-experience figure.experience-image:hover figcaption .h2 {
+  opacity: 1;
+  transform: translate3d(0%, 0%, 0);
+  transition-delay: 0.4s;
+}
+.section-experience figure.experience-image:hover figcaption p {
+  opacity: 0.9;
+  transform: translate3d(0%, 0%, 0);
+  transition-delay: 0.6s;
+}
+.section-experience figure.experience-image:hover figcaption::before {
+  background: rgba(255, 255, 255, 0);
+  left: 30px;
+  opacity: 1;
+  transition-delay: 0s;
+}
 .section-contact-me {
   background: url(../images/background/nepalBackgroundOutline.svg);
   background-repeat: no-repeat;
   background-size: 80%;
   background-attachment: fixed;
   background-position: center;
+}
+.section-contact-me .btn {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  max-width: 20rem;
+}
+.section-contact-me .btn img {
+  transition: all 0.3s;
+  max-width: 32px;
+  height: auto;
+}
+.section-contact-me .btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: -2;
+}
+.section-contact-me .btn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ff8300;
+  transition: all 0.5s;
+  z-index: -1;
+}
+.section-contact-me .btn:hover {
+  color: black;
+}
+.section-contact-me .btn:hover img {
+  filter: invert(1) sepia(0) saturate(0) hue-rotate(0deg) brightness(0);
+}
+.section-contact-me .btn:hover:before {
+  width: 100%;
+}
+.section-contact-me .contact-btn {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .section-contact-me .contact-btn {
+    row-gap: 3rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-contact-me .contact-btn {
+    row-gap: 2rem;
+  }
+}
+.section-contact-me .first-row {
+  justify-content: space-evenly;
+}
+@media (max-width: 767.98px) {
+  .section-contact-me .first-row {
+    row-gap: 2rem;
+  }
+}
+.section-contact-me .second-row {
+  justify-content: space-evenly;
+}
+@media (min-width: 768px) {
+  .section-contact-me .second-row {
+    width: 65%;
+    margin: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-contact-me .second-row {
+    row-gap: 2rem;
+  }
 }
 .section-footer {
   background: url(../images/background/NepalFooter.svg);
@@ -12229,18 +12544,6 @@ body {
   color: #ff8300 !important;
 }
 
-.icon path {
-  fill: #fff;
-  transition: fill 0.3s ease;
-}
-.icon:hover path {
-  fill: #ff8300;
-}
-
-.navbar-toggler-icon {
-  background-image: url(../../images/icons/navbar.svg);
-}
-
 .mb--2 {
   margin-bottom: -1rem;
 }
@@ -12249,26 +12552,8 @@ body {
   padding-left: 2rem;
 }
 
-.btn {
-  width: 10rem;
-  margin-right: 0.75rem;
-  margin-left: 0.75rem;
-}
-.btn-outline-primary {
-  color: #ff8300;
-  border-color: #ff8300;
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-}
-.btn-outline-primary:hover {
-  background-color: #ff8300;
-  border-color: #2c2d32;
-  color: #2c2d32;
-}
-
-@media (max-width: 991.98px) {
-  .border-none-lg {
-    border-left: none !important;
-  }
+.mt-9 {
+  margin-top: 9rem;
 }
 
 .rotate {
@@ -12295,126 +12580,4 @@ body {
   to {
     transform: rotateZ(360deg);
   }
-}
-.animation-text {
-  margin-bottom: 2rem;
-}
-.animation-text p {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0;
-}
-.animation-text .word {
-  position: absolute;
-  opacity: 0;
-  font-size: 25px;
-}
-.animation-text .letter {
-  display: inline-block;
-  position: relative;
-  float: left;
-  transform: translateZ(25px);
-  transform-origin: 50% 50% 25px;
-}
-.animation-text .letter.out {
-  transform: rotateX(90deg);
-  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-.animation-text .letter.behind {
-  transform: rotateX(-90deg);
-}
-.animation-text .letter.in {
-  transform: rotateX(0deg);
-  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-figure.experience-image {
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  margin: 10px;
-  min-width: 220px;
-  max-width: 310px;
-  max-height: 220px;
-  width: 100%;
-  background: #000000;
-  text-align: left;
-}
-figure.experience-image * {
-  box-sizing: border-box;
-}
-figure.experience-image img {
-  max-width: 100%;
-  opacity: 1;
-  width: 100%;
-  transition: opacity 0.35s;
-}
-figure.experience-image figcaption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 30px 3em;
-  width: 100%;
-  height: 100%;
-}
-figure.experience-image figcaption::before {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  bottom: 30px;
-  left: 100%;
-  border-left: 4px solid #ff8300;
-  content: "";
-  opacity: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  transition: all 0.5s;
-  transition-delay: 0.6s;
-}
-figure.experience-image h2, figure.experience-image .h2,
-figure.experience-image p {
-  margin: 0 0 5px;
-  opacity: 0;
-  transition: opacity 0.35s, transform 0.35s;
-}
-figure.experience-image h2, figure.experience-image .h2 {
-  word-spacing: -0.15em;
-  font-weight: 300;
-  text-transform: uppercase;
-  transform: translate3d(30%, 0%, 0);
-  transition-delay: 0.3s;
-}
-figure.experience-image h2 span, figure.experience-image .h2 span {
-  font-weight: 800;
-}
-figure.experience-image p {
-  font-weight: 200;
-  transform: translate3d(0%, 30%, 0);
-  transition-delay: 0s;
-}
-figure.experience-image a {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  color: #ffffff;
-}
-figure.experience-image:hover img {
-  opacity: 0.3;
-}
-figure.experience-image:hover figcaption h2, figure.experience-image:hover figcaption .h2 {
-  opacity: 1;
-  transform: translate3d(0%, 0%, 0);
-  transition-delay: 0.4s;
-}
-figure.experience-image:hover figcaption p {
-  opacity: 0.9;
-  transform: translate3d(0%, 0%, 0);
-  transition-delay: 0.6s;
-}
-figure.experience-image:hover figcaption::before {
-  background: rgba(255, 255, 255, 0);
-  left: 30px;
-  opacity: 1;
-  transition-delay: 0s;
 }/*# sourceMappingURL=main.css.map */
