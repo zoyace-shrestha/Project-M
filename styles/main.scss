@@ -2,6 +2,8 @@
 @import "./scss/variables.scss";
 // @import "./scss/style.scss";
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Grenze+Gotisch:wght@100..900&family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bubbler+One&family=Cabin+Sketch:wght@400;700&family=Grenze+Gotisch:wght@100..900&family=Kaushan+Script&family=Rampart+One&display=swap");
 
 :root {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath fill='%23fff' stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -17,6 +19,8 @@ body {
   background-position: center;
   background-color: $heavy-metal;
   line-height: 1.9;
+  font-weight: 100;
+  letter-spacing: 1.25px;
 }
 
 .header-secondary {
@@ -100,6 +104,10 @@ body {
       letter-spacing: 3px;
       position: relative;
       display: inline-block;
+      font-family: "Cabin Sketch", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 4rem;
 
       span {
         color: $primary;
@@ -297,6 +305,14 @@ body {
 
   // Skills
   &-skills {
+    .panel {
+      background: url(../images/background/nepalBackgroundOutline.svg);
+      background-repeat: no-repeat;
+      background-size: 80%;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
     .techical-bars {
       .bar {
         font-size: 23px;
@@ -441,9 +457,11 @@ body {
 
     .image-gallery {
       display: grid;
+      max-width: 85%;
+      margin: auto;
       grid-template-areas:
-        "image1 image5 image2 image2  "
-        "image4 image5 image3 image3  ";
+        "image1 image3 image3 image4  "
+        "image2 image3 image3 image5  ";
 
       .image1 {
         grid-area: image1;
@@ -465,6 +483,7 @@ body {
       }
 
       @include media-breakpoint-down(md) {
+        max-width: 100%;
         grid-template-areas:
           "image1"
           "image2"
@@ -495,6 +514,7 @@ body {
         height: 100%;
         -webkit-transition: opacity 0.35s;
         transition: opacity 0.35s;
+        object-fit: cover;
       }
 
       figcaption {
@@ -610,7 +630,7 @@ body {
       overflow: hidden;
       z-index: 1;
       width: 100%;
-      max-width: 20rem;
+      max-width: 21rem;
 
       img {
         transition: all 0.3s;
@@ -738,6 +758,30 @@ body {
   @include media-breakpoint-down(md) {
     margin-bottom: 3rem;
   }
+}
+
+.max-w-300 {
+  max-width: 300px;
+}
+
+.max-h-300 {
+  max-height: 300px;
+}
+
+.max-h-625 {
+  max-height: 625px;
+}
+
+.round-4 {
+  border-radius: 15px;
+}
+
+.col-gap-5 {
+  column-gap: 2rem;
+}
+
+.letter-sp-0 {
+  letter-spacing: 0;
 }
 
 // Rotate Animation

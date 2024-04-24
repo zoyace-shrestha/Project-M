@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Grenze+Gotisch:wght@100..900&family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bubbler+One&family=Cabin+Sketch:wght@400;700&family=Grenze+Gotisch:wght@100..900&family=Kaushan+Script&family=Rampart+One&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11981,6 +11983,8 @@ body {
   background-position: center;
   background-color: #2c2d32;
   line-height: 1.9;
+  font-weight: 100;
+  letter-spacing: 1.25px;
 }
 
 .header-secondary {
@@ -12052,6 +12056,10 @@ body {
   letter-spacing: 3px;
   position: relative;
   display: inline-block;
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
 }
 .section-hero-name span {
   color: #ff8300;
@@ -12215,6 +12223,13 @@ body {
   width: 50px;
   height: auto;
 }
+.section-skills .panel {
+  background: url(../images/background/nepalBackgroundOutline.svg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-attachment: fixed;
+  background-position: center;
+}
 .section-skills .techical-bars .bar {
   font-size: 23px;
   margin: 2rem 0;
@@ -12328,7 +12343,9 @@ body {
 }
 .section-experience .image-gallery {
   display: grid;
-  grid-template-areas: "image1 image5 image2 image2  " "image4 image5 image3 image3  ";
+  max-width: 85%;
+  margin: auto;
+  grid-template-areas: "image1 image3 image3 image4  " "image2 image3 image3 image5  ";
 }
 .section-experience .image-gallery .image1 {
   grid-area: image1;
@@ -12347,6 +12364,7 @@ body {
 }
 @media (max-width: 767.98px) {
   .section-experience .image-gallery {
+    max-width: 100%;
     grid-template-areas: "image1" "image2" "image3" "image4" "image5";
   }
 }
@@ -12367,6 +12385,8 @@ body {
   width: 100%;
   height: 100%;
   transition: opacity 0.35s;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .section-experience figure.experience-image figcaption {
   position: absolute;
@@ -12453,7 +12473,7 @@ body {
   overflow: hidden;
   z-index: 1;
   width: 100%;
-  max-width: 20rem;
+  max-width: 21rem;
 }
 .section-contact-me .btn img {
   transition: all 0.3s;
@@ -12570,6 +12590,31 @@ body {
   .mb-7 {
     margin-bottom: 3rem;
   }
+}
+
+.max-w-300 {
+  max-width: 300px;
+}
+
+.max-h-300 {
+  max-height: 300px;
+}
+
+.max-h-625 {
+  max-height: 625px;
+}
+
+.round-4 {
+  border-radius: 15px;
+}
+
+.col-gap-5 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
+.letter-sp-0 {
+  letter-spacing: 0;
 }
 
 .rotate {

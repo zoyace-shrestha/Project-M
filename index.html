@@ -235,7 +235,9 @@
           class="collapse navbar-collapse justify-content-end"
           id="navbarNavAltMarkup"
         >
-          <div class="navbar-nav align-items-center gap-5 mt-md-0 mt-3">
+          <div
+            class="navbar-nav align-items-center gap-5 mt-md-0 mt-3 px-2 py-2 shadow round-4 bg-body-secondary"
+          >
             <a class="nav-link clr-body-white" href="#aboutMeSection">About</a>
             <a class="nav-link clr-body-white" href="#skillSection">Skills</a>
             <a class="nav-link clr-body-white" href="#experienceSection"
@@ -276,7 +278,7 @@
               </a>
               <a
                 class="nav-link clr-body-white"
-                href="https://www.linkedin.com/in/zoyace-shrestha/"
+                href="mailto:shresthazoyace@gmail.com"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="26"
@@ -319,12 +321,12 @@
               <div class="row flex-column row-gap-3">
                 <a
                   href="#contactSection"
-                  class="btn shadow rounded-0 mx-md-0 mx-3"
+                  class="btn shadow mx-md-0 mx-3 round-4 bg-body-secondary"
                   >Contact Me</a
                 >
                 <a
                   href="https://sumoworld.com.np/"
-                  class="btn shadow rounded-0 mx-md-0 mx-3"
+                  class="btn shadow mx-md-0 mx-3 round-4 bg-body-secondary"
                   target="_blank"
                   >Business</a
                 >
@@ -333,10 +335,10 @@
             <div
               class="col-12 col-md-3 order-3 order-md-2 z-3 overflow-hidden text-center text-md-start"
             >
-              <img
+              <!-- <img
                 src="./images/img/file.png"
                 style="align-self: baseline; width: 200px"
-              />
+              /> -->
             </div>
             <div class="col-12 col-md-3 order-2 order-md-3 z-3 mb-7 mt-md-0">
               <p class="section-hero-introduction clr-body-primary">
@@ -730,13 +732,15 @@
     </div>
 
     <!-- Skills -->
-    <div class="section-skills bg-body-secondary py-6" id="skillSection">
+    <div class="section-skills py-6" id="skillSection">
       <div class="container">
-        <h4 class="text-center pb-5">
+        <h4 class="text-center pb-5 mt-4">
           <span class="header-secondary">Skills</span>
         </h4>
-        <div class="row justify-content-evenly row-gap-5">
-          <div class="col-12 col-md-4 mb-5 container-skill">
+        <div class="row justify-content-center row-gap-5 col-gap-5">
+          <div
+            class="col-12 col-md-5 mb-5 container-skill p-4 shadow round-4 bg-body-secondary panel"
+          >
             <p class="">Coding Skills</p>
             <p>
               Here are the design skills I've honed through my academic and
@@ -818,7 +822,9 @@
             </div>
             <!-- Skills bracket end  -->
           </div>
-          <div class="col-12 col-md-4 mb-5 container-skill">
+          <div
+            class="col-12 col-md-5 mb-5 container-skill p-4 shadow round-4 bg-body-secondary panel"
+          >
             <p class="">Design Skills</p>
             <p>
               Here are the design skills I've honed through my academic and
@@ -897,14 +903,14 @@
     <!-- About Me -->
     <div class="section-about-me bg-body-primary py-6" id="aboutMeSection">
       <div class="container">
-        <h4 class="text-center pb-5">
+        <h4 class="text-center pb-5 mt-4">
           <span class="header-secondary">About Me</span>
         </h4>
         <div class="row justify-content-around align-items-center row-gap-5">
           <div class="col-12 text-center col-md-5">
-            <img src="/images/img/zoyace02.jpg" />
+            <!-- <img src="/images/img/zoyace02.jpg" /> -->
           </div>
-          <div class="col-12 col-md-5">
+          <div class="col-12 col-md-5 p-4 round-4 shadow bg-body-secondary">
             <p class="quote">
               Graduating from the University of Nebraska Lincoln with a major in
               computer science and a minor in mathematics—yeah, I took
@@ -924,62 +930,52 @@
     <!-- Experience -->
     <div class="section-experience bg-body-primary py-6" id="experienceSection">
       <div class="container">
-        <h3 class="text-center pb-5">
+        <h3 class="text-center pb-5 mt-4">
           <span class="header-secondary">Experience</span>
         </h3>
         <div class="image-gallery">
-          <figure class="experience-image image1">
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample42.jpg"
-              alt="sample41"
-            />
+          <figure class="experience-image image1 max-h-300 round-4">
+            <img src="images/img/EversanaTheme.jpg" alt="Eversana-Intouch" />
             <figcaption>
               <h2>EVERSANA <span>INTOUCH</span></h2>
               <p>Front-End Developer</p>
               <a href="#"></a>
             </figcaption>
           </figure>
-          <figure class="experience-image image2">
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample42.jpg"
-              alt="sample42"
-            />
+          <figure class="experience-image image2 max-h-300 round-4">
+            <img src="/images/img/NebraskaTheme.jpg" alt="Nebraska-Logo" />
             <figcaption>
               <h2>Nebraska<br /><span>Today</span></h2>
               <p>Drupal-Developer</p>
               <a href="#"></a>
             </figcaption>
           </figure>
-          <figure class="experience-image image3">
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample43.jpg"
-              alt="sample43"
-            />
+          <figure class="experience-image image3 max-h-625 round-4">
+            <img src="/images/img/FootPrintTheme.jpg" alt="sample43" />
             <figcaption>
-              <h2>Werner <br /><span>Enterprise</span></h2>
-              <p>Front-End Developer</p>
+              <h2>
+                Life <br />
+                <span>Journey</span>
+              </h2>
+              <p>
+                A brief storytelling of how and why I am where I am today<br />
+              </p>
               <a href="#"></a>
             </figcaption>
           </figure>
-          <figure class="experience-image image4">
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample43.jpg"
-              alt="sample43"
-            />
+          <figure class="experience-image image4 max-h-300 round-4">
+            <img src="/images/img/BhoomiTheme.jpg" alt="sample43" />
             <figcaption>
               <h2>Rumsan<br /><span>Associate</span></h2>
-              <p>Web-Developer internship</p>
+              <p>Web-Developer Internship</p>
               <a href="#"></a>
             </figcaption>
           </figure>
-          <figure class="experience-image image5">
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample43.jpg"
-              alt="sample43"
-            />
+          <figure class="experience-image image5 max-h-300 round-4">
+            <img src="/images/img/WernersTheme.jpg" alt="sample43" />
             <figcaption>
-              <h2>Rumsan<br /><span>Associate</span></h2>
-              <p>Web-Developer internship</p>
+              <h2>Werner<br /><span>Enterprise</span></h2>
+              <p>Front-End Developer Project</p>
               <a href="#"></a>
             </figcaption>
           </figure>
@@ -990,7 +986,7 @@
     <!-- Contact Me  -->
     <div class="section-contact-me bg-body-primary py-6" id="contactSection">
       <div class="container">
-        <h3 class="text-center pb-5">
+        <h3 class="text-center pb-5 mt-4">
           <span class="header-secondary">Contact Me</span>
         </h3>
         <p class="text-center pb-5">Here are the ways to contact me</p>
@@ -999,16 +995,16 @@
             <a
               href="mailto:shresthazoyace@gmail.com"
               target="_blank"
-              class="btn px-2 py-2 rounded-0 shadow col-md col-4"
+              class="btn px-2 py-2 rounded-0 shadow col-md col-4 rounded-4 bg-body-secondary"
               ><div class="row flex-row align-items-center mx-3">
                 <img src="/images/icons/email.svg" class="col p-0" />
-                <p class="col m-0">shresthazoyace@gmail.com</p>
+                <p class="col m-0 letter-sp-0">shresthazoyace@gmail.com</p>
               </div>
             </a>
             <a
               href="tel:+17272183359"
               target="_blank"
-              class="btn px-2 py-2 rounded-0 shadow col-md col-4"
+              class="btn px-2 py-2 rounded-0 shadow col-md col-4 rounded-4 bg-body-secondary"
               ><div class="row flex-row align-items-center mx-3">
                 <img src="/images/icons/phone.svg" class="col p-0" />
                 <p class="col m-0">+1 (727)-218-3359</p>
@@ -1017,7 +1013,7 @@
             <a
               href="https://www.linkedin.com/in/zoyace-shrestha/"
               target="_blank"
-              class="btn px-2 py-2 rounded-0 shadow col-md col-4"
+              class="btn px-2 py-2 rounded-0 shadow col-md col-4 rounded-4 bg-body-secondary"
               ><div class="row flex-row align-items-center mx-3">
                 <img src="/images/icons/linkedIn.svg" class="col p-0" />
                 <p class="col m-0">zoyace-shrestha</p>
@@ -1028,7 +1024,7 @@
             <a
               href="https://github.com/zoyace-shrestha"
               target="_blank"
-              class="btn px-2 py-2 rounded-0 shadow col-md col-4"
+              class="btn px-2 py-2 rounded-0 shadow col-md col-4 rounded-4 bg-body-secondary"
               ><div class="row flex-row align-items-center mx-3">
                 <img src="/images/icons/github.svg" class="col p-0" />
                 <p class="col m-0">zoyace-shrestha</p>
@@ -1037,7 +1033,7 @@
             <a
               href="https://sumoworld.com.np/"
               target="_blank"
-              class="btn px-2 py-2 rounded-0 shadow col-md col-4"
+              class="btn px-2 py-2 rounded-0 shadow col-md col-4 rounded-4 bg-body-secondary"
               ><div class="row flex-row align-items-center mx-3">
                 <img src="/images/icons/handshake.svg" class="col p-0" />
                 <p class="col m-0">Sumo World</p>
