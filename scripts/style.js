@@ -2,6 +2,8 @@ var words = document.getElementsByClassName("word");
 var wordArray = [];
 var currentWord = 0;
 const filled = document.querySelector(".filled");
+const navBarWidth = document.querySelector(".navbar-nav").offsetWidth;
+const pageWidth = document.body.offsetWidth;
 
 words[currentWord].style.opacity = 1;
 for (var i = 0; i < words.length; i++) {

@@ -74,7 +74,6 @@ body {
     width: 100%;
     height: 2px;
     z-index: 100;
-    top: 93px;
 
     .filled {
       width: 0%;
@@ -531,7 +530,7 @@ body {
           right: 30px;
           bottom: 30px;
           left: 100%;
-          border-left: 4px solid $primary;
+          border-left: 2px solid $primary;
           content: "";
           opacity: 0;
           background-color: rgba(44, 45, 50, 0.5);
@@ -774,6 +773,10 @@ body {
 
 .round-4 {
   border-radius: 15px;
+}
+
+.round-t-l-r-4 {
+  border-radius: 15px 15px 0 0;
 }
 
 .col-gap-5 {
