@@ -11988,8 +11988,10 @@ body {
 }
 
 .header-secondary {
-  padding-bottom: 2px;
-  border-bottom: 2px solid #ff8300;
+  font-size: 1.5rem;
+}
+.header-secondary span {
+  color: #ff8300;
 }
 
 .py-6 {
@@ -12032,7 +12034,7 @@ body {
 .section-progress-bar .filled {
   width: 0%;
   height: 100%;
-  background-image: linear-gradient(to right, #ff8300, #ff8300);
+  background-image: linear-gradient(to right, #2c2d32, #ff8300);
 }
 .section-hero {
   background: url(../images/background/nepalBackgroundOutline.svg);
@@ -12553,11 +12555,81 @@ body {
   background-position: bottom;
 }
 
+.experience-section {
+  position: absolute;
+  top: 9rem;
+  width: 100%;
+}
+.experience-section .container {
+  display: grid;
+  grid-template-areas: "title title title title techStack techStack" "image image myTask myTask language language" "work work myTask myTask language language" "projectOverview projectOverview projectOverview projectOverview projectOverview projectOverview";
+  gap: 2rem;
+}
+.experience-section-image {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  grid-area: image;
+}
+.experience-section-image img {
+  width: 350px;
+  height: 350px;
+}
+.experience-section-title {
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  grid-area: title;
+}
+.experience-section-title span {
+  color: #ff8300;
+}
+.experience-section-project-overview {
+  grid-area: projectOverview;
+}
+.experience-section-project-overview h4, .experience-section-project-overview .h4 {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.experience-section-project-overview span {
+  color: #ff8300;
+}
+.experience-section-my-task {
+  grid-area: myTask;
+}
+.experience-section-my-task h4, .experience-section-my-task .h4 {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.experience-section-my-task span {
+  color: #ff8300;
+}
+.experience-section-work {
+  grid-area: work;
+}
+.experience-section-tech-stach {
+  grid-area: techStack;
+}
+.experience-section-tech-stach span {
+  color: #ff8300;
+}
+.experience-section-tech-stach-language {
+  grid-area: language;
+  display: grid;
+  gap: 2rem;
+}
+.experience-section-tech-stach-language i {
+  font-size: 1.75rem;
+}
+
 .bg-body-primary {
   background-color: #2c2d32;
 }
 .bg-body-secondary {
   background-color: #323338 !important;
+}
+.bg-body-teritary {
+  background-color: #414247 !important;
 }
 
 .clr-body-white {
@@ -12571,6 +12643,19 @@ body {
 }
 .clr-body:has(.active) {
   color: #ff8300 !important;
+}
+
+.shadow-primary {
+  background-color: #ff8300 !important;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3) !important;
+}
+.shadow-secondary {
+  background-color: #2c2d32 !important;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3) !important;
+}
+.shadow-teritary {
+  background-color: #414247 !important;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
 .mb--2 {

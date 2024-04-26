@@ -24,15 +24,18 @@ body {
 }
 
 .header-secondary {
-  padding-bottom: 2px;
-  border-bottom: 2px solid $primary;
+  font-size: 1.5rem;
+
+  span {
+    color: $primary;
+  }
 }
 
 .py-6 {
   padding: 5rem 0;
 }
 
-// Section
+// Main Section
 .section {
   &-navbar {
     position: fixed;
@@ -78,7 +81,7 @@ body {
     .filled {
       width: 0%;
       height: 100%;
-      background-image: linear-gradient(to right, $primary, $primary);
+      background-image: linear-gradient(to right, $heavy-metal, $primary);
     }
   }
 
@@ -712,6 +715,90 @@ body {
   }
 }
 
+// Experience Section
+.experience-section {
+  position: absolute;
+  top: 9rem;
+  width: 100%;
+
+  .container {
+    display: grid;
+    grid-template-areas:
+      "title title title title techStack techStack"
+      "image image myTask myTask language language"
+      "work work myTask myTask language language"
+      "projectOverview projectOverview projectOverview projectOverview projectOverview projectOverview";
+    gap: 2rem;
+  }
+
+  &-image {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    grid-area: image;
+
+    img {
+      width: 350px;
+      height: 350px;
+    }
+  }
+
+  &-title {
+    font-family: "Cabin Sketch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    grid-area: title;
+
+    span {
+      color: $primary;
+    }
+  }
+
+  &-project-overview {
+    grid-area: projectOverview;
+    h4 {
+      width: fit-content;
+    }
+
+    span {
+      color: $primary;
+    }
+  }
+
+  &-my-task {
+    grid-area: myTask;
+    h4 {
+      width: fit-content;
+    }
+
+    span {
+      color: $primary;
+    }
+  }
+
+  &-work {
+    grid-area: work;
+  }
+
+  &-tech-stach {
+    grid-area: techStack;
+    span {
+      color: $primary;
+    }
+
+    &-language {
+      grid-area: language;
+
+      display: grid;
+      gap: 2rem;
+
+      i {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
 // Individual
 .bg-body {
   &-primary {
@@ -720,6 +807,10 @@ body {
 
   &-secondary {
     background-color: $charcoal !important;
+  }
+
+  &-teritary {
+    background-color: $ship-grey !important;
   }
 }
 
@@ -740,6 +831,23 @@ body {
 
   &:has(.active) {
     color: $primary !important;
+  }
+}
+
+.shadow {
+  &-primary {
+    background-color: $primary !important;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  &-secondary {
+    background-color: $heavy-metal !important;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  &-teritary {
+    background-color: $ship-grey !important;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3) !important;
   }
 }
 

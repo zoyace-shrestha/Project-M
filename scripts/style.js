@@ -1,9 +1,6 @@
 var words = document.getElementsByClassName("word");
 var wordArray = [];
 var currentWord = 0;
-const filled = document.querySelector(".filled");
-const navBarWidth = document.querySelector(".navbar-nav").offsetWidth;
-const pageWidth = document.body.offsetWidth;
 
 words[currentWord].style.opacity = 1;
 for (var i = 0; i < words.length; i++) {
@@ -54,13 +51,5 @@ function splitLetters(word) {
   wordArray.push(letters);
 }
 
-function updateBar() {
-  filled.style.width = `${
-    (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-  }%`;
-  requestAnimationFrame(updateBar);
-}
-
-updateBar();
 changeWord();
 setInterval(changeWord, 5000);
