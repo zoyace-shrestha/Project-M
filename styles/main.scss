@@ -9,6 +9,10 @@
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath fill='%23fff' stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Raleway", Arial, sans-serif;
   color: $white;
@@ -21,6 +25,18 @@ body {
   line-height: 1.9;
   font-weight: 100;
   letter-spacing: 1.25px;
+
+  &.journey {
+    background: $journey;
+
+    nav {
+      background: $journey;
+
+      .navbar-nav {
+        background: $journey !important;
+      }
+    }
+  }
 }
 
 .header-secondary {
@@ -715,7 +731,7 @@ body {
   }
 }
 
-// Experience Section
+// Experience Section for the page
 .experience-section {
   position: absolute;
   top: 9rem;
@@ -860,6 +876,220 @@ body {
   }
 }
 
+// Journey Section for the page
+.journey {
+  scroll-behavior: smooth;
+  .section-navbar {
+    position: static;
+    background-color: $journey;
+  }
+
+  &-section {
+    &-hero {
+      background-image: url(../images/background/journey-hero.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 90vh;
+      position: relative;
+
+      &-title {
+        display: inline-block;
+        font-family: "Cabin Sketch", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 4rem;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+
+        span {
+          color: $primary;
+        }
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        bottom: -100px;
+        height: 200px;
+        width: 100%;
+        background: linear-gradient(to bottom, transparent, $journey 50%);
+      }
+    }
+
+    &-body {
+      position: relative;
+
+      .section {
+        &-1 {
+          position: absolute;
+          top: 15rem;
+          width: 100%;
+          left: 15%;
+          @include media-breakpoint-down(sm) {
+            top: 3rem;
+          }
+        }
+
+        &-2 {
+          position: absolute;
+          top: 25rem;
+          width: 100%;
+          left: 15%;
+          @include media-breakpoint-down(sm) {
+            top: 12rem;
+          }
+        }
+
+        &-3 {
+          position: absolute;
+          top: 35rem;
+          width: 100%;
+          left: 15%;
+          @include media-breakpoint-down(sm) {
+            top: 20rem;
+          }
+        }
+
+        &-4 {
+          position: absolute;
+          top: 45rem;
+          width: 100%;
+          left: 15%;
+          @include media-breakpoint-down(sm) {
+            top: 35rem;
+          }
+        }
+
+        &-5 {
+          position: absolute;
+          top: 59rem;
+          width: 100%;
+          left: 15%;
+          @include media-breakpoint-down(sm) {
+            top: 50rem;
+          }
+        }
+        &-6 {
+          position: absolute;
+          top: 75rem;
+          width: 100%;
+          left: 15%;
+          @include media-breakpoint-down(sm) {
+            top: 71rem;
+          }
+        }
+        &-7 {
+          position: absolute;
+          top: 88rem;
+          width: 100%;
+          left: 15%;
+          @include media-breakpoint-down(sm) {
+            top: 88rem;
+          }
+        }
+        &-8 {
+          position: absolute;
+          top: 100rem;
+          width: 100%;
+          left: 15%;
+          @include media-breakpoint-down(sm) {
+            top: 107rem;
+          }
+        }
+        &-9 {
+          position: absolute;
+          top: 115rem;
+          width: 100%;
+          left: 15%;
+          @include media-breakpoint-down(sm) {
+            top: 127rem;
+          }
+        }
+      }
+
+      .line-container {
+        /* position: fixed; */
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        text-align: left;
+        overflow: hidden;
+        z-index: 10;
+      }
+
+      svg {
+        display: inline-block;
+        height: 100%;
+        text-align: center;
+      }
+
+      .paragraph {
+        max-width: 80%;
+
+        &-year {
+          font-family: "Cabin Sketch", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 2rem;
+        }
+      }
+
+      .container-custom {
+        max-width: 90%;
+        margin: auto;
+      }
+    }
+  }
+
+  .footer {
+    height: 4rem;
+    position: absolute;
+    @include media-breakpoint-down(sm) {
+      top: 140rem;
+    }
+    &-text {
+      position: relative;
+      text-decoration: none;
+      text-underline-offset: 1px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 2px;
+        background-color: #ff8300;
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+      p {
+        display: inline;
+      }
+
+      svg {
+        display: inline;
+        vertical-align: middle;
+      }
+    }
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: scale(1.3);
+    }
+  }
+}
+
 // Individual
 .bg-body {
   &-primary {
@@ -916,6 +1146,22 @@ body {
   margin-bottom: -1rem;
 }
 
+.ml-md-3 {
+  @include media-breakpoint-down(md) {
+    margin-left: 1rem;
+  }
+}
+
+.ml-3 {
+  margin-left: 1.5rem;
+}
+
+.ml-4 {
+  margin-left: 3rem;
+  @include media-breakpoint-down(md) {
+    margin-left: 1rem;
+  }
+}
 .pl-4 {
   padding-left: 2rem;
 }
