@@ -11,6 +11,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
     <!-- Nav Bar -->
@@ -317,14 +318,16 @@
     <!-- Bento Box -->
     <div class="experience-section">
       <div class="container">
-        <div class="round-4 text-center shadow experience-section-title">
+        <div
+          class="round-4 text-center shadow experience-section-title reveal-top"
+        >
           <h3 class="p-3">Rumsan Assocaite<span>.</span></h3>
         </div>
         <div class="round-4 shadow experience-section-image">
           <img src="../images/img/BhoomiTheme.jpg" alt="Bhoomi Image" />
         </div>
         <div
-          class="round-4 shadow-teritary experience-section-project-overview bg-body-teritary"
+          class="round-4 shadow-teritary experience-section-project-overview bg-body-teritary reveal-bottom"
         >
           <h4 class="mx-3 pt-3 pb-2">Company Overview<span>.</span></h4>
           <p class="p-3">
@@ -361,10 +364,14 @@
             potential security breaches.
           </p>
         </div>
-        <div class="round-4 shadow-teritary experience-section-tech-stach">
+        <div
+          class="round-4 shadow-teritary experience-section-tech-stach reveal-right"
+        >
           <h4 class="mx-3 py-3 my-1">Tech Stack<span>.</span></h4>
         </div>
-        <div class="experience-section-tech-stach-language">
+        <div
+          class="experience-section-tech-stach-language reveal-right-interval"
+        >
           <div
             class="round-4 shadow d-flex justify-content-center align-items-center p-3"
           >
@@ -404,5 +411,6 @@
       </div>
     </div>
     <script src="../scripts/navbarfill.js"></script>
+    <script src="../scripts/animation.js"></script>
   </body>
 </html>

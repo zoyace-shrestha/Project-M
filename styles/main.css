@@ -12237,13 +12237,6 @@ body.journey nav .navbar-nav {
   width: 50px;
   height: auto;
 }
-.section-skills .panel {
-  background: url(../images/background/nepalBackgroundOutline.svg);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-attachment: fixed;
-  background-position: center;
-}
 .section-skills .techical-bars .bar {
   font-size: 23px;
   margin: 2rem 0;

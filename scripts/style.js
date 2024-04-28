@@ -37,7 +37,7 @@ function animateLetterIn(nw, i) {
 }
 
 function splitLetters(word) {
-  var content = word.innerHTML + " "; // Add space after each word
+  var content = word.innerHTML + " ";
   word.innerHTML = "";
   var letters = [];
   for (var i = 0; i < content.length; i++) {
