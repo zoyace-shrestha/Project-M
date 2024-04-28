@@ -12041,9 +12041,8 @@ body.journey nav .navbar-nav {
 .section-progress-bar {
   position: fixed;
   width: 100%;
-  height: 0.5px;
+  height: 1px;
   z-index: 100;
-  top: 5.2rem;
 }
 .section-progress-bar .filled {
   width: 0%;
