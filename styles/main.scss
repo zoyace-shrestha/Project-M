@@ -63,6 +63,11 @@ body {
     margin: auto;
     width: 100%;
     z-index: 10;
+
+    @include media-breakpoint-down(md) {
+      top: 0px;
+    }
+
     .navbar-toggler-icon {
       background-image: url(../../images/icons/navbar.svg);
     }
@@ -1039,6 +1044,8 @@ body {
   .footer {
     height: 4rem;
     position: absolute;
+    left: 0;
+
     @include media-breakpoint-down(sm) {
       top: 140rem;
     }
