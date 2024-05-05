@@ -12011,6 +12011,10 @@ body.journey nav .navbar-nav {
   padding: 5rem 0;
 }
 
+.pt-6 {
+  padding-top: 5rem;
+}
+
 .section-navbar {
   position: fixed;
   background: url(../images/background/nepalBackgroundOutline.svg);
@@ -12857,6 +12861,7 @@ body.journey nav .navbar-nav {
 .journey .footer {
   height: 4rem;
   position: absolute;
+  left: 0;
 }
 @media (max-width: 575.98px) {
   .journey .footer {
@@ -13061,7 +13066,7 @@ body.journey nav .navbar-nav {
   transform: translateY(0%);
 }
 .gallery-slides:nth-child(3) {
-  left: -10px;
+  left: 0px;
   background-size: cover;
 }
 .gallery-slides:nth-child(4) {
@@ -13083,14 +13088,26 @@ body.journey nav .navbar-nav {
   background-size: cover;
   opacity: 0;
 }
+.gallery-slides:nth-child(8) {
+  left: 440px;
+  background-size: cover;
+  opacity: 0;
+}
+.gallery-slides:nth-child(9) {
+  left: 440px;
+  background-size: cover;
+  opacity: 0;
+}
 .gallery-slides-content {
   position: relative;
-  padding: 20px;
+  padding: 10px 20px;
   max-width: 600px;
   transition: 0.25s;
   transition-delay: 0s;
   transform: translateY(40px);
   opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0px 20px 20px 20px;
 }
 .gallery-slides:nth-child(1) .gallery-slides-content, .gallery-slides:nth-child(2) .gallery-slides-content {
   opacity: 1;
