@@ -12066,7 +12066,7 @@ body.journey nav .navbar-nav {
   background-position: center;
 }
 .section-hero-flex {
-  height: 75vh;
+  min-height: 600px;
 }
 @media (max-width: 991.98px) {
   .section-hero-flex {
