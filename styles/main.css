@@ -13098,6 +13098,21 @@ body.journey nav .navbar-nav {
   background-size: cover;
   opacity: 0;
 }
+.gallery-slides:nth-child(10) {
+  left: 440px;
+  background-size: cover;
+  opacity: 0;
+}
+.gallery-slides:nth-child(11) {
+  left: 440px;
+  background-size: cover;
+  opacity: 0;
+}
+.gallery-slides:nth-child(12) {
+  left: 440px;
+  background-size: cover;
+  opacity: 0;
+}
 .gallery-slides-content {
   position: relative;
   padding: 10px 20px;

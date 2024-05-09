@@ -1311,6 +1311,24 @@ body {
       opacity: 0;
     }
 
+    &:nth-child(10) {
+      left: 440px;
+      background-size: cover;
+      opacity: 0;
+    }
+
+    &:nth-child(11) {
+      left: 440px;
+      background-size: cover;
+      opacity: 0;
+    }
+
+    &:nth-child(12) {
+      left: 440px;
+      background-size: cover;
+      opacity: 0;
+    }
+
     &-content {
       position: relative;
       padding: 10px 20px;
