@@ -715,10 +715,7 @@ body {
 
     .second-row {
       justify-content: space-evenly;
-      @include media-breakpoint-up(md) {
-        width: 65%;
-        margin: auto;
-      }
+
       @include media-breakpoint-down(md) {
         row-gap: 2rem;
       }
@@ -1001,7 +998,16 @@ body {
         }
         &-9 {
           position: absolute;
-          top: 115rem;
+          top: 110rem;
+          width: 100%;
+          left: 15%;
+          @include media-breakpoint-down(sm) {
+            top: 127rem;
+          }
+        }
+        &-10 {
+          position: absolute;
+          top: 119rem;
           width: 100%;
           left: 15%;
           @include media-breakpoint-down(sm) {

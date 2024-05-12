@@ -12554,12 +12554,6 @@ body.journey nav .navbar-nav {
 .section-contact-me .second-row {
   justify-content: space-evenly;
 }
-@media (min-width: 768px) {
-  .section-contact-me .second-row {
-    width: 65%;
-    margin: auto;
-  }
-}
 @media (max-width: 767.98px) {
   .section-contact-me .second-row {
     row-gap: 2rem;
@@ -12821,12 +12815,23 @@ body.journey nav .navbar-nav {
 }
 .journey-section-body .section-9 {
   position: absolute;
-  top: 115rem;
+  top: 110rem;
   width: 100%;
   left: 15%;
 }
 @media (max-width: 575.98px) {
   .journey-section-body .section-9 {
+    top: 127rem;
+  }
+}
+.journey-section-body .section-10 {
+  position: absolute;
+  top: 119rem;
+  width: 100%;
+  left: 15%;
+}
+@media (max-width: 575.98px) {
+  .journey-section-body .section-10 {
     top: 127rem;
   }
 }
