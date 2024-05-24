@@ -2,57 +2,16 @@
 
 // Colors
 
-// Theme Color
-$gold-drop: #ff8300;
-$red: #dc3545;
-$yellow: #ffc843;
-$green: #28a745;
-$white: #fff;
-$black: #000;
-
 // Logo Color
-$sunny-yellow: #fdf600;
-$raspberry: #e00b7a;
-$cyan: #1f93d8;
-$custard: #fff95c;
-$golden: #f9c202;
-$citrus: #9fd108;
-$classic-rose: #edcfe0;
-$pinkish-red: #ef89b0;
-$raspberry-pink: #e55c99;
-$dogwood-rose: #de0c7c;
-$almond: #f5d9bd;
-$muddy-water: #c78860;
-$old-brick: #9b1f17;
-$rustic-red: #52100b;
+$fountain-blue: #54b9c4;
+$shiraz: #a10d30;
+$parchment: #f3eed9;
 
 // Background
-$heavy-metal: #2c2d32;
-$mirage: #19191d;
-$charcoal: #323338;
-$dark-jungle: #1f1f23;
-$ship-grey: #414247;
-$dary-grey: #56575b;
-$dove-grey: #6b6c70;
-$pink-swan: #b5b5b5;
-$journey: #252525;
-// $journey: #2c2d32;
+$athens-gray: #f8f9fa;
 
 // scss-docs-start theme-color-variables
-$primary: $gold-drop;
-$secondary: $yellow;
-$success: $green;
-$info: $cyan;
-$warning: $yellow;
-$danger: $red;
-$brand-primary: $gold-drop;
-$light: $charcoal;
-$dark: $heavy-metal;
-$tertiary: $heavy-metal;
-
-// Gray layer
-$gray-layer-one: $dary-grey;
-$gray-layer-two: $dark-jungle;
-$gray-layer-three: $ship-grey;
-$gray-layer-four: $dove-grey;
-$gray-layer-five: $pink-swan;
+$primary: $fountain-blue;
+$secondary: $shiraz;
+$tertiary: $parchment;
+$bg-primary: $athens-gray;
