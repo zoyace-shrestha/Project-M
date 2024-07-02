@@ -32,16 +32,18 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">About Me</a>
+              <a class="nav-link" aria-current="page" href="#about-me"
+                >About Me</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Photography</a>
+              <a class="nav-link" href="./photography.html">Photography</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Videography</a>
+              <a class="nav-link" href="./videography.html">Videography</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
           <div></div>
@@ -109,26 +111,245 @@
     <div
       class="hero d-flex justify-content-center align-items-center flex-column"
     >
-      <h1 class="hero-title">John Doe</h1>
-      <p class="text-center">
+      <h1 class="hero-title">Mark Denman</h1>
+      <p class="hero-text text-center">
         Easily realign text to components with text alignment classes. For
         start, end, and center alignment, responsive classes are available that
         use the same viewport width breakpoints as the grid system.
       </p>
+      <br />
       <a>johndoe@gmail.com</a>
+      <br />
       <a>+1(111)-222-3333</a>
+      <br />
+      <h2 class="hero-sub-title">Explore</h2>
+      <br />
     </div>
 
     <!-- Gallery 1 -->
-    <div class="row">
-      <div class="col-sm col-md-4">Column 1</div>
-      <div class="col-sm col-md-4">Column 1</div>
-      <div class="col-sm col-md-4">Column 1</div>
+    <div class="gallery my-5">
+      <div class="row">
+        <div class="col-sm col-md-4 p-1">
+          <img src="./images/img/product/alanna+serving+3.jpg" />
+        </div>
+        <div class="col-sm col-md-4 p-1">
+          <img src="./images/img/product/dish+oh+2.jpg" />
+        </div>
+        <div class="col-sm col-md-4 p-1">
+          <img src="./images/img/protraits/Daniel+and+Rita.jpg" />
+        </div>
+      </div>
+      <div class="gallery row">
+        <div class="col-sm col-md-4 p-1">
+          <img src="./images/img/events/speaker+wide+2.jpg" />
+        </div>
+        <div class="col-sm col-md-4 p-1">
+          <img src="./images/img/events/pianist+3.jpg" />
+        </div>
+        <div class="col-sm col-md-4 p-1">
+          <img src="./images/img/website/fellowship3-min.jpg" />
+        </div>
+      </div>
     </div>
-    <div class="row">
-      <div class="col-sm col-md-4">Column 1</div>
-      <div class="col-sm col-md-4">Column 1</div>
-      <div class="col-sm col-md-4">Column 1</div>
+
+    <!-- About Me -->
+    <div class="about mt-5" id="about-me">
+      <div class="d-flex justify-content-center align-items-center">
+        <h2 class="about-sub-title mb-4">About Me</h2>
+      </div>
+      <div class="row row-gap-3">
+        <div class="col-lg-6 col-12 px-5">
+          <h3>Hi, I'm Mark<span class="clr-primary">.</span></h3>
+          <p class="about-text">
+            I have been a photographer and videographer since I was 16, and I’ve
+            been learning new things and improving my skills ever since. I love
+            meeting people, asking questions, and telling stories. Photography
+            and Videography are the tools I use to do that.I was born and raised
+            in Huntsville, Alabama, and I graduated from The University of
+            Alabama with a bachelor’s in Creative Media in 2022.I’d love to meet
+            you and help tell your story in an engaging and powerful way!
+          </p>
+          <h3>God Bless<span class="clr-primary">!</span></h3>
+        </div>
+        <div class="col-lg-6 col-12">
+          <img
+            class="w-100 h-100 object-fit-cover"
+            src="./images/img/mark.jpeg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery 2 -->
+    <div class="gallery my-5">
+      <div class="row">
+        <div class="col-sm col-md-4 p-1">
+          <img src="./images/img/website/kristenEmily5-min.jpg" />
+        </div>
+        <div class="col-sm col-md-4 p-1">
+          <img src="./images/img/website/BrianAndSteve-min.jpg" />
+        </div>
+        <div class="col-sm col-md-4 p-1">
+          <img src="./images/img/events/Capitol+8.jpg" />
+        </div>
+      </div>
+      <div class="gallery row">
+        <div class="col-sm col-md-4 p-1">
+          <img src="./images/img/landscape/countryside+b&w+2.jpg" />
+        </div>
+        <div class="col-sm col-md-4 p-1">
+          <img src="./images/img/website/LizzyAndJessica-min.jpg" />
+        </div>
+        <div class="col-sm col-md-4 p-1">
+          <img src="./images/img/website/welding3-min.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Discover My Photo Video -->
+    <div class="discover bg-secondary py-5">
+      <div class="container">
+        <div class="row row-gap-3">
+          <div class="col-sm col-md-4">
+            <h2 class="discover-sub-title">
+              <span class="text-underline"> Discover</span><br />My Photo <br />
+              <span class="clr-primary">&</span> <br />
+              Video Work
+            </h2>
+          </div>
+          <div class="col-sm col-md-4">
+            <a href="./photography.html" class="discover-card">
+              <div class="photo p-4 position-relative" style="height: 600px">
+                <p class="position-absolute">
+                  Explore My Photography Portfolio: Product, Landscape, Sports,
+                  Events, Websites
+                </p>
+                <h3 class="position-absolute card-title">Photography</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm col-md-4">
+            <a href="./videography.html" class="discover-card">
+              <div class="video p-4 position-relative" style="height: 600px">
+                <p class="position-absolute">
+                  Explore My Videography Portfolio: Interviews, Scripted,
+                  Sports, Events, Real Estate, Web Banners
+                </p>
+                <h3 class="position-absolute card-title">Videography</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Me -->
+    <div class="contact container my-5 column-gap-3" id="contact">
+      <h2 class="hero-sub-title text-center my-5">Contact Me</h2>
+      <div class="row row-gap-5">
+        <div class="col-sm-6 col-12">
+          <form action="" class="contact-form row flex-column gap-3 mx-3">
+            <input
+              type="text"
+              name="first-name"
+              placeholder="First Name"
+              class="contact-input min-h-50 w-100"
+            />
+            <input
+              type="text"
+              name="last-name"
+              placeholder="Last Name"
+              class="contact-input min-h-50 w-100"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="contact-input min-h-50 w-100"
+            />
+            <textarea
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              class="contact-input w-100 min-h-100"
+            ></textarea>
+            <button type="submit" class="contact-submit">Submit</button>
+          </form>
+        </div>
+        <div class="col-sm-6 col-12 contact-icons">
+          <div
+            class="d-flex flex-md-column flex-row h-100 row-gap-5 text-sm-left align-items-start text-center"
+          >
+            <div class="item">
+              <a class="text-center" href="#"
+                ><svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon"
+                >
+                  <path
+                    d="M11.7 3H24.3C29.1 3 33 6.9 33 11.7V24.3C33 26.6074 32.0834 28.8203 30.4518 30.4518C28.8203 32.0834 26.6074 33 24.3 33H11.7C6.9 33 3 29.1 3 24.3V11.7C3 9.39262 3.9166 7.17974 5.54817 5.54817C7.17974 3.9166 9.39262 3 11.7 3ZM11.4 6C9.96783 6 8.59432 6.56893 7.58162 7.58162C6.56893 8.59432 6 9.96783 6 11.4V24.6C6 27.585 8.415 30 11.4 30H24.6C26.0322 30 27.4057 29.4311 28.4184 28.4184C29.4311 27.4057 30 26.0322 30 24.6V11.4C30 8.415 27.585 6 24.6 6H11.4ZM25.875 8.25C26.3723 8.25 26.8492 8.44754 27.2008 8.79917C27.5525 9.15081 27.75 9.62772 27.75 10.125C27.75 10.6223 27.5525 11.0992 27.2008 11.4508C26.8492 11.8025 26.3723 12 25.875 12C25.3777 12 24.9008 11.8025 24.5492 11.4508C24.1975 11.0992 24 10.6223 24 10.125C24 9.62772 24.1975 9.15081 24.5492 8.79917C24.9008 8.44754 25.3777 8.25 25.875 8.25ZM18 10.5C19.9891 10.5 21.8968 11.2902 23.3033 12.6967C24.7098 14.1032 25.5 16.0109 25.5 18C25.5 19.9891 24.7098 21.8968 23.3033 23.3033C21.8968 24.7098 19.9891 25.5 18 25.5C16.0109 25.5 14.1032 24.7098 12.6967 23.3033C11.2902 21.8968 10.5 19.9891 10.5 18C10.5 16.0109 11.2902 14.1032 12.6967 12.6967C14.1032 11.2902 16.0109 10.5 18 10.5ZM18 13.5C16.8065 13.5 15.6619 13.9741 14.818 14.818C13.9741 15.6619 13.5 16.8065 13.5 18C13.5 19.1935 13.9741 20.3381 14.818 21.182C15.6619 22.0259 16.8065 22.5 18 22.5C19.1935 22.5 20.3381 22.0259 21.182 21.182C22.0259 20.3381 22.5 19.1935 22.5 18C22.5 16.8065 22.0259 15.6619 21.182 14.818C20.3381 13.9741 19.1935 13.5 18 13.5Z"
+                    fill="white"
+                  />
+                </svg>
+                <span>@mdman</span>
+              </a>
+            </div>
+            <div class="item">
+              <a class="text-center" href="#"
+                ><svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon"
+                >
+                  <g clip-path="url(#clip0_5_27)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M27 4.5C28.1935 4.5 29.3381 4.97411 30.182 5.81802C31.0259 6.66193 31.5 7.80653 31.5 9V27C31.5 28.1935 31.0259 29.3381 30.182 30.182C29.3381 31.0259 28.1935 31.5 27 31.5H9C7.80653 31.5 6.66193 31.0259 5.81802 30.182C4.97411 29.3381 4.5 28.1935 4.5 27V9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80653 4.5 9 4.5H27ZM12 15C11.6022 15 11.2206 15.158 10.9393 15.4393C10.658 15.7206 10.5 16.1022 10.5 16.5V24C10.5 24.3978 10.658 24.7794 10.9393 25.0607C11.2206 25.342 11.6022 25.5 12 25.5C12.3978 25.5 12.7794 25.342 13.0607 25.0607C13.342 24.7794 13.5 24.3978 13.5 24V16.5C13.5 16.1022 13.342 15.7206 13.0607 15.4393C12.7794 15.158 12.3978 15 12 15ZM16.5 13.5C16.1022 13.5 15.7206 13.658 15.4393 13.9393C15.158 14.2206 15 14.6022 15 15V24C15 24.3978 15.158 24.7794 15.4393 25.0607C15.7206 25.342 16.1022 25.5 16.5 25.5C16.8978 25.5 17.2794 25.342 17.5607 25.0607C17.842 24.7794 18 24.3978 18 24V18.51C18.4575 17.994 19.23 17.388 20.0895 17.0205C20.589 16.8075 21.3405 16.7205 21.8625 16.8855C22.0357 16.9294 22.1899 17.0284 22.302 17.1675C22.38 17.2725 22.5 17.5065 22.5 18V24C22.5 24.3978 22.658 24.7794 22.9393 25.0607C23.2206 25.342 23.6022 25.5 24 25.5C24.3978 25.5 24.7794 25.342 25.0607 25.0607C25.342 24.7794 25.5 24.3978 25.5 24V18C25.5 16.995 25.245 16.101 24.714 15.384C24.2254 14.7338 23.5415 14.2571 22.7625 14.0235C21.4095 13.599 19.911 13.8345 18.9105 14.2635C18.5899 14.4007 18.2779 14.557 17.976 14.7315C17.9131 14.3859 17.7309 14.0733 17.4612 13.8482C17.1915 13.6232 16.8513 13.4999 16.5 13.5ZM12 10.5C11.6022 10.5 11.2206 10.658 10.9393 10.9393C10.658 11.2206 10.5 11.6022 10.5 12C10.5 12.3978 10.658 12.7794 10.9393 13.0607C11.2206 13.342 11.6022 13.5 12 13.5C12.3978 13.5 12.7794 13.342 13.0607 13.0607C13.342 12.7794 13.5 12.3978 13.5 12C13.5 11.6022 13.342 11.2206 13.0607 10.9393C12.7794 10.658 12.3978 10.5 12 10.5Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_5_27">
+                      <rect width="36" height="36" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <span>@mdman</span>
+              </a>
+            </div>
+            <div class="item">
+              <a class="text-center" href="#"
+                ><svg
+                  width="36"
+                  height="26"
+                  viewBox="0 0 36 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon"
+                >
+                  <path
+                    d="M18.1147 0.497803H18.315C20.1645 0.504553 29.5357 0.572053 32.0625 1.25155C32.8264 1.45893 33.5224 1.86315 34.0811 2.42382C34.6398 2.98449 35.0416 3.68197 35.2463 4.44655C35.4735 5.30155 35.6333 6.4333 35.7412 7.60105L35.7638 7.83505L35.8132 8.42005L35.8312 8.65405C35.9775 10.7106 35.9955 12.6366 35.9977 13.0573V13.2261C35.9955 13.6626 35.9753 15.7191 35.8132 17.8611L35.7952 18.0973L35.775 18.3313C35.6625 19.6183 35.496 20.8963 35.2463 21.8368C35.0416 22.6014 34.6398 23.2989 34.0811 23.8595C33.5224 24.4202 32.8264 24.8244 32.0625 25.0318C29.4525 25.7338 19.5322 25.7833 18.1575 25.7856H17.838C17.1427 25.7856 14.2673 25.7721 11.2522 25.6686L10.8698 25.6551L10.674 25.6461L10.2892 25.6303L9.9045 25.6146C7.407 25.5043 5.02875 25.3266 3.933 25.0296C3.16941 24.8224 2.47354 24.4185 1.91487 23.8582C1.35619 23.298 0.954277 22.601 0.74925 21.8368C0.4995 20.8986 0.333 19.6183 0.2205 18.3313L0.2025 18.0951L0.1845 17.8611C0.0728177 16.3365 0.0112845 14.8087 0 13.2801L0 13.0033C0.0045 12.5196 0.0225 10.8478 0.144 9.0028L0.15975 8.77105L0.1665 8.65405L0.1845 8.42005L0.234 7.83505L0.2565 7.60105C0.3645 6.4333 0.52425 5.2993 0.7515 4.44655C0.956183 3.68197 1.35795 2.98449 1.91664 2.42382C2.47533 1.86315 3.17139 1.45893 3.93525 1.25155C5.031 0.959053 7.40925 0.779053 9.90675 0.666553L10.2892 0.650803L10.6762 0.637303L10.8698 0.630553L11.2545 0.614803C13.3958 0.545961 15.5381 0.507707 17.6805 0.500053L18.1147 0.497803ZM14.4 7.7203V18.5608L23.7533 13.1428L14.4 7.7203Z"
+                    fill="black"
+                  />
+                </svg>
+                <span>@mdman</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-teritary text-center py-3 footer-border">
+      2024 Mark Denman - Alabama Photographer
     </div>
 
     <script src="./scripts/style.js"></script>
