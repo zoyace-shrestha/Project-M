@@ -45,6 +45,17 @@ body {
   text-underline-offset: 5px;
 }
 
+.text-link{
+    color: #000;
+    transition: color 0.3s ease;
+
+    &:hover{
+      color: #54b9c4;
+      transition: color 0.3s ease;
+    }
+  
+}
+
 .navbar {
   .nav-item {
     &:hover {
