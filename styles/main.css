@@ -12039,11 +12039,13 @@ body {
   fill: #54b9c4;
 }
 
-.hero {
-  height: 60vh;
-}
 .hero-title {
   font-size: calc(4rem + 2vw);
+}
+@media (max-width: 575.98px) {
+  .hero-title {
+    text-align: center;
+  }
 }
 .hero-text {
   width: 80%;

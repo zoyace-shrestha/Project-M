@@ -95,10 +95,13 @@ body {
 }
 
 .hero {
-  height: 60vh;
 
   &-title {
     font-size: calc(4rem + 2vw);
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
   }
 
   &-text {
