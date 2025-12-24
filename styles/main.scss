@@ -50,7 +50,7 @@ body {
     transition: color 0.3s ease;
 
     &:hover{
-      color: #54b9c4;
+      color: #4e7b4f;
       transition: color 0.3s ease;
     }
   
@@ -175,7 +175,7 @@ body {
     &:hover {
       p,
       h3 {
-        color: #54b9c4;
+        color: #4e7b4f;
         transition: all 0.3s ease-in-out;
       }
     }
@@ -232,14 +232,14 @@ body {
 
   &-submit {
     border: none;
-    background-color: #54b9c4;
+    background-color: #4e7b4f;
     max-width: 200px;
     min-height: 50px;
     transition: all 0.3s ease-in-out;
 
     &:hover {
       background-color: black;
-      color: #54b9c4;
+      color: #4e7b4f;
       transition: all 0.3s ease-in-out;
     }
   }
@@ -260,7 +260,7 @@ body {
         }
 
         span {
-          color: #54b9c4 !important;
+          color: #4e7b4f !important;
           transition: fill 0.3s ease;
         }
       }
@@ -353,7 +353,7 @@ body {
 .hero-nav {
   a {
     text-decoration: none;
-    color: #54b9c4;
+    color: #4e7b4f;
     font-weight: 500;
     font-size: 20px;
     transition: color 0.3s ease;
@@ -383,13 +383,13 @@ body {
     color: black;
 
     &:hover {
-      color: #54b9c4;
+      color: #4e7b4f;
     }
   }
 }
 
 .footer-border {
-  border-top: solid 4px #54b9c4;
+  border-top: solid 4px #4e7b4f;
 }
 
 .min-h-100 {
