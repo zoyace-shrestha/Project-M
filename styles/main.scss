@@ -126,6 +126,16 @@ body {
     text-decoration-color: $primary;
     text-underline-offset: 5px;
   }
+
+  &-video {
+    width: 100%;
+    max-width: 960px;
+    margin: 1.25rem auto 0;
+
+    iframe {
+      border: 0;
+    }
+  }
 }
 
 .gallery {
