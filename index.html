@@ -129,62 +129,33 @@
       </div>
     </nav>
 
-    <!-- Hero -->
-    <div
-      class="hero d-flex justify-content-center align-items-center flex-column"
-    >
-      <h1 class="hero-title">Mark Denman</h1>
-      <p class="hero-text text-center mb-0">
-        Explore timeless photographs and cinematic videos that capture the essence of every moment.
-      </p>
-      <div class="hero-video px-3">
-        <div class="ratio ratio-16x9">
-          <iframe
-            src="https://www.youtube.com/embed/sKEscYlnnf8"
-            title="Featured video — Mark Denman"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+    <!-- Hero Reel -->
+    <section class="hero hero-reel" id="top">
+      <div class="hero-reel-inner">
+        <h1 class="hero-title">Mark Denman</h1>
+        <p class="hero-text text-center mb-0">
+          Explore timeless photographs and cinematic videos that capture the essence of every moment.
+        </p>
+        <div class="hero-video">
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.youtube.com/embed/sKEscYlnnf8"
+              title="Featured video — Mark Denman"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
+        <a href="#discover" class="hero-scroll-hint" aria-label="Scroll to explore">
+          <span>Scroll to explore</span>
+          <i class="bx bx-chevron-down"></i>
+        </a>
       </div>
-      <br />
-      <a>madenman9@gmail.com</a>
-      <br />
-      <a href="tel:+12566653383" class="text-link">+1(256)-665-3383</a>
-      <br />
-      <h2 class="hero-sub-title">Explore</h2>
-      <br />
-    </div>
-
-    <!-- Gallery 1 -->
-    <div class="gallery">
-      <div class="row">
-        <div class="col-sm col-md-4 p-1">
-          <img src="./images/img/product/alanna+serving+3.jpg" />
-        </div>
-        <div class="col-sm col-md-4 p-1">
-          <img src="./images/img/product/dish+oh+2.jpg" />
-        </div>
-        <div class="col-sm col-md-4 p-1">
-          <img src="./images/img/protraits/Daniel+and+Rita.jpg" />
-        </div>
-      </div>
-      <div class="gallery row">
-        <div class="col-sm col-md-4 p-1">
-          <img src="./images/img/events/speaker+wide+2.jpg" />
-        </div>
-        <div class="col-sm col-md-4 p-1">
-          <img src="./images/img/events/pianist+3.jpg" />
-        </div>
-        <div class="col-sm col-md-4 p-1">
-          <img src="./images/img/website/fellowship3-min.jpg" />
-        </div>
-      </div>
-    </div>
+    </section>
 
     <!-- Discover My Photo Video -->
-    <div class="discover bg-secondary py-5">
+    <div class="discover bg-secondary py-5" id="discover">
       <div class="container">
         <div class="row row-gap-3">
           <div class="col-sm col-md-4">
@@ -420,8 +391,10 @@
 
     <!-- Image Modal -->
     <div id="imageModal" class="image-modal">
-      <span class="image-modal-close">&times;</span>
-      <img class="image-modal-content" id="modalImage" />
+      <span class="image-modal-close" aria-label="Close">&times;</span>
+      <button type="button" class="image-modal-prev" aria-label="Previous image">&#10094;</button>
+      <button type="button" class="image-modal-next" aria-label="Next image">&#10095;</button>
+      <img class="image-modal-content" id="modalImage" alt="" />
     </div>
 
     <script src="./scripts/style.js"></script>

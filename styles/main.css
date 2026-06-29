@@ -11943,17 +11943,44 @@ body {
   fill: #4e7b4f;
 }
 
+.hero-reel {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem 2rem;
+}
+.hero-reel-inner {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: calc(100vh - 3rem);
+  min-height: calc(100dvh - 3rem);
+}
 .hero-title {
   font-size: calc(4rem + 2vw);
 }
 @media (max-width: 575.98px) {
   .hero-title {
     text-align: center;
+    font-size: calc(2rem + 4vw);
   }
 }
 .hero-text {
   width: 80%;
   line-height: 48px;
+}
+@media (max-width: 575.98px) {
+  .hero-text {
+    width: 95%;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
 }
 .hero-sub-title {
   font-size: calc(1rem + 1vw);
@@ -11963,17 +11990,101 @@ body {
 }
 .hero-video {
   width: 100%;
-  max-width: 960px;
-  margin: 1.25rem auto 0;
+  max-width: 1200px;
+  margin: 1.5rem auto 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.hero-video .ratio {
+  width: 100%;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+  overflow: hidden;
 }
 .hero-video iframe {
   border: 0;
 }
+.hero-scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+.hero-scroll-hint i {
+  font-size: 1.75rem;
+  animation: bounceDown 2s infinite;
+}
+.hero-scroll-hint:hover {
+  color: #4e7b4f;
+}
 
+@keyframes bounceDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
 .gallery img {
   height: 400px;
   width: 100%;
   object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.02);
+}
+.gallery [class*=col-] {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.gallery [class*=col-]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+.gallery [class*=col-]::after {
+  content: "\eb9a";
+  font-family: "boxicons";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #000;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+.gallery [class*=col-]:hover::before, .gallery [class*=col-]:hover::after {
+  opacity: 1;
+}
+.gallery [class*=col-]:hover::after {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .about-text {
@@ -12103,7 +12214,7 @@ body {
   left: 0;
   width: 100%;
   height: 50%;
-  background: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgb(84, 185, 196));
+  background: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgb(78, 123, 79));
   z-index: 1;
 }
 
@@ -12126,7 +12237,7 @@ body {
   left: 0;
   width: 100%;
   height: 50%;
-  background: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgb(84, 185, 196));
+  background: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgb(78, 123, 79));
   z-index: 1;
 }
 
@@ -12229,18 +12340,41 @@ body {
   cursor: pointer;
   z-index: 10001;
   transition: color 0.3s ease;
+  line-height: 1;
 }
 .image-modal-close:hover, .image-modal-close:focus {
   color: #bbb;
   text-decoration: none;
 }
 
-.gallery img {
+.image-modal-prev,
+.image-modal-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 1;
+  padding: 0.75rem 1rem;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  z-index: 10001;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
 }
-.gallery img:hover {
-  opacity: 0.8;
+.image-modal-prev:hover,
+.image-modal-next:hover {
+  background: rgba(78, 123, 79, 0.85);
+  color: #fff;
+}
+
+.image-modal-prev {
+  left: 1rem;
+}
+
+.image-modal-next {
+  right: 1rem;
 }
 
 @keyframes fadeIn {

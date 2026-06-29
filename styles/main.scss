@@ -106,18 +106,45 @@ body {
 }
 
 .hero {
+  &-reel {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem 2rem;
+
+    &-inner {
+      width: 100%;
+      max-width: 1400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      min-height: calc(100vh - 3rem);
+      min-height: calc(100dvh - 3rem);
+    }
+  }
 
   &-title {
     font-size: calc(4rem + 2vw);
 
     @include media-breakpoint-down(sm) {
       text-align: center;
+      font-size: calc(2rem + 4vw);
     }
   }
 
   &-text {
     width: 80%;
     line-height: calc(16px * 3);
+
+    @include media-breakpoint-down(sm) {
+      width: 95%;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
   }
 
   &-sub-title {
@@ -129,12 +156,54 @@ body {
 
   &-video {
     width: 100%;
-    max-width: 960px;
-    margin: 1.25rem auto 0;
+    max-width: 1200px;
+    margin: 1.5rem auto 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    .ratio {
+      width: 100%;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.18);
+      border-radius: 4px;
+      overflow: hidden;
+    }
 
     iframe {
       border: 0;
     }
+  }
+
+  &-scroll-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    color: $black;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+
+    i {
+      font-size: 1.75rem;
+      animation: bounceDown 2s infinite;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+@keyframes bounceDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
   }
 }
 
@@ -143,6 +212,61 @@ body {
     height: 400px;
     width: 100%;
     object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  [class*="col-"] {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: "\eb9a";
+      font-family: "boxicons";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.85);
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: $black;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      opacity: 1;
+    }
+
+    &:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
   }
 }
 
@@ -306,7 +430,7 @@ body {
     background: linear-gradient(
       to bottom,
       rgba(245, 246, 252, 0),
-      rgba(84, 185, 196, 1)
+      rgba(78, 123, 79, 1)
     );
     z-index: 1;
   }
@@ -334,7 +458,7 @@ body {
     background: linear-gradient(
       to bottom,
       rgba(245, 246, 252, 0),
-      rgba(84, 185, 196, 1)
+      rgba(78, 123, 79, 1)
     );
     z-index: 1;
   }
@@ -449,6 +573,7 @@ body {
   cursor: pointer;
   z-index: 10001;
   transition: color 0.3s ease;
+  line-height: 1;
 
   &:hover,
   &:focus {
@@ -457,13 +582,34 @@ body {
   }
 }
 
-.gallery img {
+.image-modal-prev,
+.image-modal-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 1;
+  padding: 0.75rem 1rem;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  z-index: 10001;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
 
   &:hover {
-    opacity: 0.8;
+    background: rgba(78, 123, 79, 0.85);
+    color: #fff;
   }
+}
+
+.image-modal-prev {
+  left: 1rem;
+}
+
+.image-modal-next {
+  right: 1rem;
 }
 
 @keyframes fadeIn {

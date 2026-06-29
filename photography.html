@@ -478,8 +478,10 @@
 
     <!-- Image Modal -->
     <div id="imageModal" class="image-modal">
-      <span class="image-modal-close">&times;</span>
-      <img class="image-modal-content" id="modalImage" />
+      <span class="image-modal-close" aria-label="Close">&times;</span>
+      <button type="button" class="image-modal-prev" aria-label="Previous image">&#10094;</button>
+      <button type="button" class="image-modal-next" aria-label="Next image">&#10095;</button>
+      <img class="image-modal-content" id="modalImage" alt="" />
     </div>
 
     <script src="./scripts/style.js"></script>
